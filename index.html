@@ -124,7 +124,7 @@
         }
 
         /* -------------------------------------------------------------
-           HEADER LOGO & THÔNG TIN CÔNG TY (DÙNG TABLE CỐ ĐỊNH CHỐNG VỠ TRANG IN)
+           HEADER LOGO & THÔNG TIN CÔNG TY (TABLE CỐ ĐỊNH CHỐNG VỠ IN ẤN)
         ------------------------------------------------------------- */
         .company-header-table {
             width: 100%;
@@ -170,7 +170,18 @@
         .company-details p {
             font-size: 0.82rem;
             color: var(--slate-600);
-            line-height: 1.4;
+            line-height: 1.45;
+        }
+
+        .company-details p a {
+            color: var(--slate-700);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .company-details p a:hover {
+            color: var(--primary);
+            text-decoration: underline;
         }
 
         .company-details p i {
@@ -180,7 +191,7 @@
         }
 
         /* -------------------------------------------------------------
-           BANNER TIÊU ĐỀ & META DÒNG (DÙNG TABLE ĐẢM BẢO CÙNG 1 HÀNG TRÊN IN VÀ WEB)
+           BANNER TIÊU ĐỀ & META DÒNG CĂN GIỮA
         ------------------------------------------------------------- */
         .quotation-hero {
             text-align: center;
@@ -223,7 +234,7 @@
             margin-bottom: 10px;
         }
 
-        /* Bảng Meta thông tin báo giá: Luôn nằm trên 1 hàng ngang duy nhất */
+        /* Bảng Meta thông tin báo giá */
         .hero-meta-table {
             width: 100%;
             border-collapse: collapse;
@@ -254,20 +265,24 @@
             padding: 12px 16px;
             border-radius: 0 8px 8px 0;
             margin-bottom: 16px;
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            flex-wrap: wrap;
         }
 
         .recipient-box .rec-label {
-            font-size: 0.8rem;
-            color: var(--slate-500);
-            text-transform: uppercase;
+            font-size: 0.95rem;
+            color: var(--slate-600);
             font-weight: 700;
-            margin-bottom: 2px;
         }
 
         .recipient-box .rec-name {
             font-size: 1.05rem;
             font-weight: 800;
             color: var(--slate-900);
+            display: inline-block;
+            min-width: 140px;
         }
 
         .intro-text {
@@ -386,35 +401,46 @@
             white-space: nowrap;
         }
 
-        /* Summary & Terms */
+        /* -------------------------------------------------------------
+           GHI CHÚ & ĐIỀU KHOẢN THƯƠNG MẠI
+        ------------------------------------------------------------- */
         .summary-box {
             background: #f8fafc;
             border: 1px solid var(--border);
             border-radius: 8px;
-            padding: 16px;
-            margin: 18px 0;
+            padding: 16px 18px;
+            margin: 18px 0 24px 0;
             display: flex;
             flex-direction: column;
             gap: 14px;
         }
 
-        .terms-list h4 {
-            font-size: 0.9rem;
-            color: var(--slate-800);
-            margin-bottom: 6px;
+        .terms-card-header {
+            font-size: 0.92rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            text-transform: uppercase;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
+            border-bottom: 1px solid var(--slate-200);
+            padding-bottom: 6px;
+            letter-spacing: 0.01em;
+        }
+
+        .terms-card-header i {
+            color: var(--primary);
         }
 
         .terms-list ul {
-            padding-left: 18px;
-            font-size: 0.84rem;
-            color: var(--slate-600);
+            padding-left: 20px;
+            font-size: 0.85rem;
+            color: var(--slate-700);
+            line-height: 1.55;
         }
 
         .terms-list li {
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
 
         .calc-total-card {
@@ -443,39 +469,59 @@
             color: #b91c1c;
         }
 
-        /* Feature Details */
-        .feature-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 14px 0;
+        /* -------------------------------------------------------------
+           THÔNG TIN THÊM VỀ SẢN PHẨM/DỊCH VỤ
+        ------------------------------------------------------------- */
+        .product-info-box {
+            background: var(--slate-50);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px 18px;
+            margin: 10px 0 20px 0;
+            font-size: 0.88rem;
+            color: var(--slate-700);
+            line-height: 1.6;
         }
 
-        .feature-item {
-            background: var(--white);
-            border: 1px solid var(--slate-200);
-            border-left: 3px solid var(--primary);
-            border-radius: 6px;
-            padding: 12px 14px;
+        .product-intro-p {
+            margin-bottom: 12px;
+            color: var(--slate-800);
         }
 
-        .feature-item h5 {
-            font-size: 0.92rem;
+        .product-features-title {
+            font-weight: 700;
             color: var(--slate-900);
-            margin-bottom: 4px;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
             gap: 6px;
         }
 
-        .feature-item p {
-            font-size: 0.82rem;
-            color: var(--slate-600);
-            line-height: 1.45;
+        .product-features-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .product-features-list li {
+            position: relative;
+            padding-left: 24px;
+            line-height: 1.5;
+        }
+
+        .product-features-list li i {
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: #16a34a;
+            font-size: 0.85rem;
         }
 
         /* -------------------------------------------------------------
-           CHỮ KÝ ĐỐI DIỆN NHAU 100% (DÙNG TABLE NGUYÊN BẢN CỐ ĐỊNH)
+           CHỮ KÝ ĐỐI DIỆN NHAU 100%
         ------------------------------------------------------------- */
         .signature-table {
             width: 100%;
@@ -610,11 +656,9 @@
             .quotation-hero .hero-desc { font-size: 0.85rem; }
 
             .hero-meta-table td {
-                font-size: 0.74rem;
+                font-size: 0.72rem;
                 padding: 6px 2px 0 2px;
             }
-
-            .feature-grid { grid-template-columns: 1fr; gap: 10px; }
             
             table.quote-table { font-size: 0.8rem; min-width: 520px; }
             table.quote-table th, table.quote-table td { padding: 8px 6px; }
@@ -636,7 +680,7 @@
         }
 
         /* -------------------------------------------------------------
-           PRINT / PDF OPTIMIZATION (ĐẢM BẢO LOGO + META CÙNG 1 HÀNG 100%)
+           PRINT / PDF OPTIMIZATION
         ------------------------------------------------------------- */
         @media print {
             @page { size: A4 portrait; margin: 8mm 10mm; }
@@ -645,7 +689,6 @@
             .page-container { max-width: 100%; margin: 0; padding: 0; }
             .document-paper { border: none; box-shadow: none; padding: 0; }
             
-            /* Cố định Header in ấn: Logo bên trái và Thông tin bên phải luôn cùng 1 hàng */
             .company-header-table {
                 display: table !important;
                 width: 100% !important;
@@ -680,7 +723,6 @@
             .quotation-hero h2 { font-size: 1.3rem; color: #1e3a8a; }
             .quotation-hero .hero-badge { background: transparent; border: none; color: #b45309; padding: 0; }
             
-            /* Bảng Meta in ấn luôn trên 1 hàng duy nhất */
             .hero-meta-table {
                 display: table !important;
                 width: 100% !important;
@@ -694,7 +736,7 @@
                 color: #475569 !important;
             }
             
-            .feature-grid { grid-template-columns: 1fr 1fr !important; page-break-inside: avoid; }
+            .product-info-box { background: transparent !important; border: 1px solid var(--border) !important; }
             .signature-table { page-break-inside: avoid; margin-top: 18px; }
             .sign-space { height: 55px; }
             .qty-val { border: none; font-size: 11px; }
@@ -730,11 +772,11 @@
 
             <!-- Alert khi bật chế độ NVKD -->
             <div class="admin-alert" id="adminAlert">
-                <div><strong><i class="fa-solid fa-user-pen"></i> Chế độ NVKD:</strong> Bấm vào Khách hàng, Đơn giá, SĐT để sửa đổi.</div>
+                <div><strong><i class="fa-solid fa-user-pen"></i> Chế độ NVKD:</strong> Bấm vào Khách hàng, Đơn giá, Ngày lập, SĐT để sửa đổi.</div>
                 <button class="btn btn-print" style="padding: 2px 8px; font-size: 0.75rem; background: #fff; color: #1e40af; border: 1px solid #bfdbfe;" onclick="lockAdmin()">Khóa lại</button>
             </div>
 
-            <!-- Company Header (Dùng Table chuẩn: Logo & Thông tin công ty luôn ngang hàng 100% khi in và xem) -->
+            <!-- Company Header -->
             <table class="company-header-table">
                 <tr>
                     <td class="col-logo">
@@ -744,13 +786,13 @@
                         <div class="company-details">
                             <h1>CÔNG TY TNHH 114 VẠN PHÚ KHÁNH</h1>
                             <p><i class="fa-solid fa-location-dot"></i> Thôn Tân Mỹ, xã Tân Định, tỉnh Khánh Hòa</p>
-                            <p><i class="fa-solid fa-globe"></i> https://giamsatxe.net/ &nbsp;|&nbsp; <i class="fa-solid fa-phone"></i> Hotline: <strong id="headerPhone" class="editable-field" contenteditable="false" onblur="syncInfo('phone', this.innerText)">081.446.1234</strong> (<span id="headerName" class="editable-field" contenteditable="false" onblur="syncInfo('name', this.innerText)">Giang Nam</span>)</p>
+                            <p><i class="fa-solid fa-globe"></i> <a href="https://giamsatxe.net/" target="_blank">giamsatxe.net</a> &nbsp;|&nbsp; <a href="https://dinhvi.org/" target="_blank">dinhvi.org</a> &nbsp;|&nbsp; <a href="https://vanphukhanh.com/" target="_blank">vanphukhanh.com</a> &nbsp;|&nbsp; <a href="https://camxe.org/" target="_blank">camxe.org</a> &nbsp;|&nbsp; <i class="fa-solid fa-phone"></i> Hotline: <strong id="headerPhone" class="editable-field" contenteditable="false" onblur="syncInfo('phone', this.innerText)">081.446.1234</strong> (<span id="headerName" class="editable-field" contenteditable="false" onblur="syncInfo('name', this.innerText)">Giang Nam</span>)</p>
                         </div>
                     </td>
                 </tr>
             </table>
 
-            <!-- QUOTATION HERO - CĂN CHÍNH GIỮA 100% -->
+            <!-- QUOTATION HERO -->
             <div class="quotation-hero">
                 <h2>BẢNG BÁO GIÁ THIẾT BỊ & DỊCH VỤ</h2>
                 <div class="hero-desc">Hệ thống giám sát hành trình, ghi nhận hình ảnh người lái xe và ghi nhận khoan hành khách thông minh trên xe ô tô vận tải phù hợp quy định hiện hành</div>
@@ -758,27 +800,27 @@
                     <span class="hero-subdesc hero-badge"><i class="fa-solid fa-circle-check"></i> Phù hợp quy chuẩn QCVN06:2024/BCA</span>
                 </div>
                 
-                <!-- BẢNG META 3 CỘT NẰM TRÊN 1 HÀNG DUY NHẤT -->
+                <!-- BẢNG META ĐỒNG BỘ: Lập ngày ... -->
                 <table class="hero-meta-table">
                     <tr>
-                        <td style="width: 33.33%;">Số văn bản: <strong class="editable-field" id="docCode" contenteditable="false">BG-VPK/2026-CR01</strong></td>
-                        <td style="width: 33.33%;">Ngày lập: <strong class="editable-field" id="docDate" contenteditable="false">24/08/2026</strong></td>
-                        <td style="width: 33.34%;">Hiệu lực: <strong>30 ngày kể từ ngày báo giá</strong></td>
+                        <td style="width: 30%;">Số văn bản: <strong class="editable-field" id="docCode" contenteditable="false">BG-VPK/2026-CR01</strong></td>
+                        <td style="width: 40%;">Lập ngày <strong class="editable-field" id="docDateText" contenteditable="false" onblur="syncDocDate(this.innerText)">24 tháng 08 năm 2026</strong></td>
+                        <td style="width: 30%;">Hiệu lực: <strong>30 ngày</strong></td>
                     </tr>
                 </table>
             </div>
 
             <!-- Recipient Box -->
             <div class="recipient-box">
-                <div class="rec-label">Kính gửi Quý Khách hàng:</div>
-                <div class="rec-name editable-field" id="customerName" contenteditable="false">CÔNG TY TNHH CHẾ BIẾN & XUẤT KHẨU THỦY SẢN CAM RANH</div>
+                <span class="rec-label">Kính gửi:</span>
+                <span class="rec-name editable-field" id="customerName" contenteditable="false">Quý Khách hàng</span>
             </div>
 
             <p class="intro-text">
                 <strong>CÔNG TY TNHH 114 VẠN PHÚ KHÁNH</strong> trân trọng kính gửi Quý Công ty báo giá gói sản phẩm và dịch vụ, đáp ứng các văn bản nhà nước hiện hành, như sau:
             </p>
 
-            <!-- Table 1: THIẾT BỊ KHỞI TẠO BAN ĐẦU -->
+            <!-- 1. THIẾT BỊ KHỞI TẠO BAN ĐẦU -->
             <div class="sec-title">
                 <i class="fa-solid fa-box-open"></i> THIẾT BỊ KHỞI TẠO BAN ĐẦU
             </div>
@@ -826,7 +868,28 @@ Số chứng nhận: 25.04.01/CNSP</div>
                 </table>
             </div>
 
-            <!-- Table 2: DỊCH VỤ DUY TRÌ -->
+            <!-- 2. GHI CHÚ & ĐIỀU KHOẢN THƯƠNG MẠI -->
+            <div class="summary-box">
+                <div class="terms-card-header">
+                    <i class="fa-solid fa-file-contract"></i> GHI CHÚ & ĐIỀU KHOẢN THƯƠNG MẠI
+                </div>
+                <div class="terms-list">
+                    <ul>
+                        <li><strong>Đã bao gồm:</strong> Thiết bị phần cứng CAM4G-02, 01 mắt Camera cabin góc rộng, Sim Data 4G (12 tháng), Quyền sử Dịch vụ phần mềm quản lý 1 CAM tích hợp ( 12 tháng ) và hướng dẫn sử dụng.</li>
+                        <li><strong>Hậu mãi Vạn Phú Khánh:</strong> Bảo hành 24 tháng tận xe, hỗ trợ kỹ thuật 24/7.</li>
+                        <li><strong>Thời gian triển khai:</strong> Trong vòng 24h - 48h kể từ khi xác nhận đặt hàng tại tỉnh Khánh Hòa và khu vực lân cận.</li>
+                        <li><strong>Thanh toán:</strong> 100% sau khi bàn giao và bàn giao tài khoản quản trị.</li>
+                    </ul>
+                </div>
+                <div class="calc-total-card">
+                    <div class="calc-label">
+                        TỔNG DỰ TOÁN ĐƠN HÀNG:
+                    </div>
+                    <div class="calc-number" id="grandTotalText">12,312,000 VNĐ</div>
+                </div>
+            </div>
+
+            <!-- 3. DỊCH VỤ DUY TRÌ -->
             <div class="sec-title">
                 <i class="fa-solid fa-arrows-rotate"></i> DỊCH VỤ DUY TRÌ
             </div>
@@ -878,57 +941,46 @@ Số chứng nhận: 25.04.01/CNSP</div>
                 </table>
             </div>
 
-            <!-- Summary & Terms - CẬP NHẬT THANH TOÁN 100% -->
-            <div class="summary-box">
-                <div class="terms-list">
-                    <h4><i class="fa-solid fa-circle-info text-primary"></i> Ghi chú & Điều khoản thương mại:</h4>
-                    <ul>
-                        <li><strong>Đã bao gồm:</strong> Thiết bị phần cứng CAM4G-02, 01 mắt Camera cabin góc rộng, Sim Data 4G (12 tháng), Quyền sử Dịch vụ phần mềm quản lý 1 CAM tích hợp ( 12 tháng ) và hướng dẫn sử dụng.</li>
-                        <li><strong>Hậu mãi Vạn Phú Khánh:</strong> Bảo hành 24 tháng tận xe, hỗ trợ kỹ thuật 24/7.</li>
-                        <li><strong>Thời gian triển khai:</strong> Trong vòng 24h - 48h kể từ khi xác nhận đặt hàng tại tỉnh Khánh Hòa và khu vực lân cận.</li>
-                        <li><strong>Thanh toán:</strong> 100% sau khi bàn giao và bàn giao tài khoản quản trị.</li>
-                    </ul>
-                </div>
-                <div class="calc-total-card">
-                    <div class="calc-label">
-                        TỔNG DỰ TOÁN ĐƠN HÀNG:
-                    </div>
-                    <div class="calc-number" id="grandTotalText">12,312,000 VNĐ</div>
-                </div>
-            </div>
-
-            <!-- Features Information -->
+            <!-- 4. THÔNG TIN THÊM VỀ SẢN PHẨM/DỊCH VỤ -->
             <div class="sec-title">
                 <i class="fa-solid fa-microchip"></i> THÔNG TIN THÊM VỀ SẢN PHẨM/DỊCH VỤ
             </div>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <h5><i class="fa-solid fa-tower-broadcast text-primary"></i> 1. Thiết bị giám sát 4G</h5>
-                    <p>Tốc độ truyền tải dữ liệu nhanh chống, ổn định</p>
+            <div class="product-info-box">
+                <p class="product-intro-p">
+                    <strong>CAM4G-02</strong> là thiết bị giám sát hành trình và ghi nhận hình ảnh người lái xe hiện đại, được phân phối và vận hành hậu mãi bởi Vạn Phú Khánh. Đây là giải pháp công nghệ đáp ứng đầy đủ các quy định pháp luật hiện hành tại Việt Nam.
+                </p>
+                <div class="product-features-title">
+                    <i class="fa-solid fa-star text-primary"></i> Các tính năng và ưu điểm nổi bật:
                 </div>
-                <div class="feature-item">
-                    <h5><i class="fa-solid fa-map-location-dot text-primary"></i> 2. Giám sát vị trí, Xem lại lộ trình</h5>
-                    <p>Vị trí phương tiện được cập nhật liên tục, chính xác, chi tiết đến tận số nhà. Lộ trình trực quan trên bản đồ số, hành trình di chuyển theo thời gian, vị trí, trạng thái, tốc độ...</p>
-                </div>
-                <div class="feature-item">
-                    <h5><i class="fa-solid fa-file-contract text-primary"></i> 3. Báo cáo đa dạng</h5>
-                    <p>Báo cáo chuẩn QCVN06:2024/BCA, báo cáo tổng hợp, chi tiết hoạt động,... tuỳ chỉnh báo cáo theo nhu cầu khách hàng. Toàn bộ các báo cáo dễ dàng trích xuất ra định dạng File excel, pdf hoặc in trực tiếp từ phần mềm</p>
-                </div>
-                <div class="feature-item">
-                    <h5><i class="fa-solid fa-bell text-primary"></i> 4. Cảnh báo tức thời</h5>
-                    <p>Hiển thị tình trạng hoạt động của thiết bị thông qua tín hiệu đèn LED trên thiết bị. Cảnh báo tức thời các lỗi vi phạm: Quá Tốc độ, Quá thời gian lái xe bằng hệ thống còi cảnh báo trên thiết bị và phần mềm giúp lái xe và người quản lý dễ nhận biết và khắc phục lỗi...</p>
-                </div>
-                <div class="feature-item">
-                    <h5><i class="fa-solid fa-database text-primary"></i> 5. Lưu trữ dữ liệu</h5>
-                    <p>Dữ liệu của phương tiện được lưu trữ lên tới 12 tháng.</p>
-                </div>
-                <div class="feature-item">
-                    <h5><i class="fa-solid fa-chart-pie text-primary"></i> 6. Báo cáo, cảnh báo, quản trị</h5>
-                    <p>+ Thư viện hơn 300 mẫu báo cáo, cảnh báo, quản trị... được xây dựng, tích lũy trong 15 năm.</p>
-                </div>
+                <ul class="product-features-list">
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <strong>Tuân thủ quy chuẩn:</strong> Đạt chứng nhận hợp quy QCVN 06:2024/BCA của Bộ Công an và chứng nhận về an toàn, bảo mật dữ liệu từ Bộ Thông tin và Truyền thông.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <strong>Thiết kế bền bỉ:</strong> Vỏ hợp kim nhôm chuẩn công nghiệp, có khả năng chống va đập tốt.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <strong>Hiệu suất tối ưu:</strong> Tích hợp công nghệ tiết kiệm điện năng, giúp bảo vệ bình ắc quy xe.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <strong>Kết nối mở rộng:</strong> Hỗ trợ lên đến 2 mắt camera Full HD, kết nối màn hình LCD, camera lùi và bộ thiết bị chống bỏ quên trẻ em trên xe.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <strong>Hệ thống quản lý thông minh:</strong> Quản trị đa nền tảng (Web/App), cho phép giám sát vị trí, lộ trình, xem video trực tuyến hoặc xem lại ngay cả khi đã tắt máy, trích xuất video không dây nhanh chóng.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <strong>Hậu mãi Vạn Phú Khánh:</strong> Hỗ trợ kỹ thuật 24/7 và chính sách bảo hành tận xe lên đến 24 tháng.
+                    </li>
+                </ul>
             </div>
 
-            <!-- CHỮ KÝ ĐỐI DIỆN NHAU 100% BẰNG BẢNG TABLE CHUẨN -->
+            <!-- CHỮ KÝ ĐỐI DIỆN NHAU 100% -->
             <table class="signature-table">
                 <tr>
                     <td>
@@ -939,7 +991,7 @@ Số chứng nhận: 25.04.01/CNSP</div>
                     </td>
                     <td>
                         <div class="sign-date">
-                            <em>Khánh Hòa, ngày <span id="signDate" class="editable-field" contenteditable="false">24 tháng 08 năm 2026</span></em>
+                            <em>Khánh Hòa, ngày <span id="signDateText" class="editable-field" contenteditable="false" onblur="syncSignDate(this.innerText)">24 tháng 08 năm 2026</span></em>
                         </div>
                         <div class="sign-heading">Người báo giá</div>
                         <div class="sign-space"></div>
@@ -957,22 +1009,24 @@ Số chứng nhận: 25.04.01/CNSP</div>
         </div>
     </div>
 
-    <!-- MODAL NHẬP MẬT KHẨU NVKD -->
+    <!-- MODAL NHẬP MẬT KHẨU NVKD (CẬP NHẬT MẬT KHẨU MẶC ĐỊNH: 0585114114) -->
     <div class="modal-bg" id="passModal">
         <div class="modal-box">
             <h3><i class="fa-solid fa-shield-halved text-primary"></i> Mở khóa NVKD</h3>
-            <p>Nhập mật khẩu để chỉnh sửa tên khách hàng, đơn giá và số liên hệ.</p>
-            <input type="password" id="passInput" placeholder="Nhập mật khẩu (Mặc định: 123456)" onkeydown="if(event.key==='Enter') checkPass()">
+            <p>Nhập mật khẩu để chỉnh sửa tên khách hàng, đơn giá, ngày tháng và số liên hệ.</p>
+            <input type="password" id="passInput" placeholder="Nhập mật khẩu (Mặc định: 0585114114)" onkeydown="if(event.key==='Enter') checkPass()">
             <div class="modal-err" id="passErr">Mật khẩu không chính xác!</div>
             <div style="display: flex; gap: 8px;">
                 <button class="btn btn-print" style="flex: 1; background: #e2e8f0; color: #334155;" onclick="closePassModal()">Hủy</button>
                 <button class="btn btn-call" style="flex: 1;" onclick="checkPass()">Mở khóa</button>
             </div>
-            <p style="font-size: 0.72rem; color: #94a3b8; margin-top: 10px; margin-bottom: 0;">Mật khẩu mẫu: <strong>123456</strong> hoặc <strong>vpk114</strong></p>
+            <p style="font-size: 0.76rem; color: #64748b; margin-top: 12px; margin-bottom: 0; background: #f1f5f9; padding: 6px 10px; border-radius: 6px; border: 1px dashed #cbd5e1;">
+                <i class="fa-solid fa-key text-primary"></i> Mật khẩu mặc định để mở khóa: <strong>0585114114</strong>
+            </p>
         </div>
     </div>
 
-    <!-- JAVASCRIPT TÍNH TOÁN ĐỘNG -->
+    <!-- JAVASCRIPT TÍNH TOÁN ĐỘNG & MẬT KHẨU MẶC ĐỊNH MỚI -->
     <script>
         let unitPrice = 3800000;
         let simPrice = 250000;
@@ -981,7 +1035,8 @@ Số chứng nhận: 25.04.01/CNSP</div>
         const SIM_VAT = 0.10;
 
         let isAdmin = false;
-        const PASS_LIST = ["123456", "vpk114", "giangnam2026"];
+        // Cập nhật danh sách mật khẩu hợp lệ với mật khẩu mặc định 0585114114
+        const PASS_LIST = ["0585114114", "123456", "vpk114"];
 
         function formatNum(num) {
             return new Intl.NumberFormat('vi-VN').format(Math.round(num));
@@ -1039,6 +1094,16 @@ Số chứng nhận: 25.04.01/CNSP</div>
             softwarePrice = val;
             el.innerText = formatNum(softwarePrice);
             calcTotal();
+        }
+
+        function syncDocDate(val) {
+            let clean = val.trim();
+            document.getElementById('signDateText').innerText = clean;
+        }
+
+        function syncSignDate(val) {
+            let clean = val.trim();
+            document.getElementById('docDateText').innerText = clean;
         }
 
         function syncInfo(type, val) {
