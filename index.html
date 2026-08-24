@@ -776,7 +776,7 @@
                 <button class="btn btn-print" style="padding: 2px 8px; font-size: 0.75rem; background: #fff; color: #1e40af; border: 1px solid #bfdbfe;" onclick="lockAdmin()">Khóa lại</button>
             </div>
 
-            <!-- Company Header -->
+            <!-- Company Header: Logo & Danh sách các trang web -->
             <table class="company-header-table">
                 <tr>
                     <td class="col-logo">
@@ -828,11 +828,11 @@
                 <table class="quote-table">
                     <colgroup>
                         <col style="width: 7%;">
-                        <col style="width: 45%;">
+                        <col style="width: 43%;">
                         <col style="width: 10%;">
                         <col style="width: 12%;">
                         <col style="width: 13%;">
-                        <col style="width: 13%;">
+                        <col style="width: 15%;">
                     </colgroup>
                     <thead>
                         <tr>
@@ -840,8 +840,8 @@
                             <th>Tên sản phẩm/ Dịch vụ</th>
                             <th class="text-center">ĐVT</th>
                             <th class="text-center">Số lượng</th>
-                            <th class="text-right">Đơn giá (vnd)</th>
-                            <th class="text-right">Thành tiền (vnđ) đã gồm VAT</th>
+                            <th class="text-right">Đơn giá<br>(VNĐ)</th>
+                            <th class="text-right">Thành tiền đã bao gồm thuế GTGT (VNĐ)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -900,11 +900,11 @@ Số chứng nhận: 25.04.01/CNSP</div>
                 <table class="quote-table">
                     <colgroup>
                         <col style="width: 7%;">
-                        <col style="width: 45%;">
+                        <col style="width: 43%;">
                         <col style="width: 10%;">
                         <col style="width: 12%;">
                         <col style="width: 13%;">
-                        <col style="width: 13%;">
+                        <col style="width: 15%;">
                     </colgroup>
                     <thead>
                         <tr>
@@ -912,8 +912,8 @@ Số chứng nhận: 25.04.01/CNSP</div>
                             <th>Tên sản phẩm/ Dịch vụ</th>
                             <th class="text-center">ĐVT</th>
                             <th class="text-center">Thuế Suất</th>
-                            <th class="text-right">Đơn giá (vnd)</th>
-                            <th class="text-right">Thành tiền (vnđ) đã gồm VAT</th>
+                            <th class="text-right">Đơn giá<br>(VNĐ)</th>
+                            <th class="text-right">Thành tiền đã bao gồm thuế GTGT (VNĐ)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -941,7 +941,7 @@ Số chứng nhận: 25.04.01/CNSP</div>
                 </table>
             </div>
 
-            <!-- 4. THÔNG TIN THÊM VỀ SẢN PHẨM/DỊCH VỤ -->
+            <!-- 4. THÔNG TIN THÊM VỀ SẢN PHẨM/DỊCH VỤ (ĐÃ TĂNG VAI TRÒ NHÀ PHÂN PHỐI VẠN PHÚ KHÁNH) -->
             <div class="sec-title">
                 <i class="fa-solid fa-microchip"></i> THÔNG TIN THÊM VỀ SẢN PHẨM/DỊCH VỤ
             </div>
@@ -1009,7 +1009,7 @@ Số chứng nhận: 25.04.01/CNSP</div>
         </div>
     </div>
 
-    <!-- MODAL NHẬP MẬT KHẨU NVKD (CẬP NHẬT MẬT KHẨU MẶC ĐỊNH: 0585114114) -->
+    <!-- MODAL NHẬP MẬT KHẨU NVKD -->
     <div class="modal-bg" id="passModal">
         <div class="modal-box">
             <h3><i class="fa-solid fa-shield-halved text-primary"></i> Mở khóa NVKD</h3>
@@ -1035,7 +1035,6 @@ Số chứng nhận: 25.04.01/CNSP</div>
         const SIM_VAT = 0.10;
 
         let isAdmin = false;
-        // Cập nhật danh sách mật khẩu hợp lệ với mật khẩu mặc định 0585114114
         const PASS_LIST = ["0585114114", "123456", "vpk114"];
 
         function formatNum(num) {
