@@ -36,7 +36,7 @@
         body {
             background-color: #e2e8f0;
             color: var(--slate-800);
-            line-height: 1.5;
+            line-height: 1.4;
             padding: 0 0 40px 0;
         }
 
@@ -90,22 +90,13 @@
             white-space: nowrap;
         }
 
-        .btn-nvkd {
-            background: #fef3c7;
-            color: #92400e;
-        }
+        .btn-nvkd { background: #fef3c7; color: #92400e; }
         .btn-nvkd:hover { background: #fde68a; }
 
-        .btn-print {
-            background: rgba(255,255,255,0.15);
-            color: var(--white);
-        }
+        .btn-print { background: rgba(255,255,255,0.15); color: var(--white); }
         .btn-print:hover { background: rgba(255,255,255,0.25); }
 
-        .btn-call {
-            background: #22c55e;
-            color: var(--white);
-        }
+        .btn-call { background: #22c55e; color: var(--white); }
         .btn-call:hover { background: #16a34a; }
 
         /* Main Page A4 Container */
@@ -119,7 +110,7 @@
             background: var(--white);
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            padding: 32px 28px;
+            padding: 24px 24px;
             border: 1px solid var(--border);
         }
 
@@ -128,47 +119,40 @@
             width: 100%;
             border-collapse: collapse;
             border-bottom: 2px solid var(--primary);
-            padding-bottom: 12px;
-            margin-bottom: 20px;
+            padding-bottom: 10px;
+            margin-bottom: 14px;
             table-layout: fixed;
         }
 
         .company-header-table td {
             vertical-align: middle;
             border: none;
-            padding: 0 0 12px 0;
+            padding: 0 0 10px 0;
         }
 
-        .company-header-table .col-logo {
-            width: 78px;
-            text-align: left;
-        }
-
-        .company-header-table .col-info {
-            padding-left: 14px;
-            text-align: left;
-        }
+        .company-header-table .col-logo { width: 68px; text-align: left; }
+        .company-header-table .col-info { padding-left: 12px; text-align: left; }
 
         .company-logo {
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             object-fit: contain;
             display: block;
         }
 
         .company-details h1 {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             font-weight: 800;
             color: var(--primary-dark);
             text-transform: uppercase;
-            line-height: 1.3;
-            margin-bottom: 4px;
+            line-height: 1.2;
+            margin-bottom: 3px;
         }
 
         .company-details p {
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             color: var(--slate-600);
-            line-height: 1.45;
+            line-height: 1.4;
         }
 
         .company-details p a {
@@ -177,42 +161,33 @@
             font-weight: 500;
         }
 
-        .company-details p a:hover {
-            color: var(--primary);
-            text-decoration: underline;
-        }
-
-        .company-details p i {
-            color: var(--primary);
-            width: 14px;
-            text-align: center;
-        }
+        .company-details p a:hover { color: var(--primary); text-decoration: underline; }
+        .company-details p i { color: var(--primary); width: 14px; text-align: center; }
 
         /* Quotation Hero */
         .quotation-hero {
             text-align: center;
-            margin-bottom: 20px;
-            padding: 14px 12px;
+            margin-bottom: 14px;
+            padding: 10px 10px;
             background: #f8fafc;
             border-radius: 8px;
             border: 1px solid var(--slate-200);
         }
 
         .quotation-hero h2 {
-            font-size: 1.55rem;
+            font-size: 1.35rem;
             font-weight: 800;
             color: var(--primary-dark);
             text-transform: uppercase;
-            letter-spacing: -0.01em;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .quotation-hero .hero-desc {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             color: var(--slate-700);
             max-width: 760px;
-            margin: 0 auto 8px auto;
-            line-height: 1.5;
+            margin: 0 auto 6px auto;
+            line-height: 1.4;
             font-weight: 500;
         }
 
@@ -223,92 +198,72 @@
             color: #b45309;
             background: #fef3c7;
             border: 1px solid #fde68a;
-            padding: 4px 14px;
+            padding: 2px 10px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.78rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
         }
 
         .hero-meta-table {
             width: 100%;
             border-collapse: collapse;
             border-top: 1px dashed var(--slate-300);
-            margin-top: 6px;
-            padding-top: 8px;
+            margin-top: 4px;
+            padding-top: 6px;
             table-layout: fixed;
         }
 
         .hero-meta-table td {
             text-align: center;
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             color: var(--slate-600);
-            padding: 8px 4px 0 4px;
+            padding: 4px 4px 0 4px;
             border: none;
             white-space: nowrap;
         }
 
-        .hero-meta-table strong {
-            color: var(--slate-900);
-            font-weight: 700;
-        }
+        .hero-meta-table strong { color: var(--slate-900); font-weight: 700; }
 
         /* Recipient */
         .recipient-box {
             background: #eff6ff;
             border-left: 4px solid var(--primary);
-            padding: 12px 16px;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 16px;
+            padding: 8px 12px;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 10px;
             display: flex;
             align-items: baseline;
             gap: 6px;
             flex-wrap: wrap;
         }
 
-        .recipient-box .rec-label {
-            font-size: 0.95rem;
-            color: var(--slate-600);
-            font-weight: 700;
-        }
+        .recipient-box .rec-label { font-size: 0.88rem; color: var(--slate-600); font-weight: 700; }
+        .recipient-box .rec-name { font-size: 0.95rem; font-weight: 800; color: var(--slate-900); }
 
-        .recipient-box .rec-name {
-            font-size: 1.05rem;
-            font-weight: 800;
-            color: var(--slate-900);
-            display: inline-block;
-            min-width: 140px;
-        }
-
-        .intro-text {
-            font-size: 0.92rem;
-            color: var(--slate-700);
-            margin-bottom: 14px;
-        }
+        .intro-text { font-size: 0.85rem; color: var(--slate-700); margin-bottom: 10px; }
 
         /* Section Headings */
         .sec-title {
-            font-size: 1.02rem;
+            font-size: 0.92rem;
             font-weight: 800;
             color: var(--primary-dark);
-            margin: 20px 0 10px 0;
+            margin: 14px 0 8px 0;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             border-bottom: 1.5px solid var(--slate-200);
-            padding-bottom: 6px;
+            padding-bottom: 4px;
             text-transform: uppercase;
         }
 
-        .sec-title i {
-            color: var(--primary);
-        }
+        .sec-title i { color: var(--primary); }
 
         /* Tables */
         .table-wrap {
             width: 100%;
             overflow-x: auto;
-            margin-bottom: 18px;
+            margin-bottom: 12px;
             border-radius: 6px;
             border: 1px solid var(--border);
         }
@@ -316,7 +271,7 @@
         table.quote-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.88rem;
+            font-size: 0.82rem;
             text-align: left;
         }
 
@@ -324,15 +279,14 @@
             background: #f8fafc;
             color: var(--slate-700);
             font-weight: 700;
-            padding: 10px 8px;
+            padding: 8px 6px;
             border-bottom: 1px solid var(--border);
             border-right: 1px solid var(--slate-200);
-            font-size: 0.82rem;
             vertical-align: middle;
         }
 
         table.quote-table td {
-            padding: 10px 8px;
+            padding: 8px 6px;
             border-bottom: 1px solid var(--slate-200);
             border-right: 1px solid var(--slate-100);
             vertical-align: middle;
@@ -340,181 +294,96 @@
         }
 
         table.quote-table th:last-child,
-        table.quote-table td:last-child {
-            border-right: none;
-        }
+        table.quote-table td:last-child { border-right: none; }
 
         .text-center { text-align: center; }
         .text-right { text-align: right; }
 
-        .item-title {
-            font-weight: 700;
-            color: var(--slate-900);
-            line-height: 1.4;
-            white-space: pre-line;
-        }
+        .item-title { font-weight: 700; color: var(--slate-900); line-height: 1.35; white-space: pre-line; }
 
-        .qty-box {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 4px;
-        }
-
+        .qty-box { display: inline-flex; align-items: center; justify-content: center; gap: 4px; }
         .qty-btn {
-            width: 26px;
-            height: 26px;
+            width: 24px; height: 24px;
             background: var(--slate-100);
             border: 1px solid var(--border);
             border-radius: 4px;
-            font-weight: bold;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-weight: bold; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
         }
         .qty-btn:hover { background: var(--slate-200); }
 
         .qty-val {
-            width: 38px;
-            text-align: center;
-            font-weight: 700;
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            padding: 2px;
-            font-size: 0.9rem;
+            width: 34px; text-align: center; font-weight: 700;
+            border: 1px solid var(--border); border-radius: 4px;
+            padding: 2px; font-size: 0.85rem;
         }
 
-        .price-val {
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        .total-val {
-            font-weight: 800;
-            color: var(--primary);
-            white-space: nowrap;
-        }
+        .price-val { font-weight: 600; white-space: nowrap; }
+        .total-val { font-weight: 800; color: var(--primary); white-space: nowrap; }
 
         /* Summary & Terms */
         .summary-box {
             background: #f8fafc;
             border: 1px solid var(--border);
             border-radius: 8px;
-            padding: 16px 18px;
-            margin: 18px 0 24px 0;
+            padding: 12px 14px;
+            margin: 10px 0 14px 0;
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            gap: 10px;
         }
 
         .terms-card-header {
-            font-size: 0.92rem;
+            font-size: 0.85rem;
             font-weight: 800;
             color: var(--primary-dark);
             text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            display: flex; align-items: center; gap: 6px;
             border-bottom: 1px solid var(--slate-200);
-            padding-bottom: 6px;
+            padding-bottom: 4px;
         }
 
-        .terms-card-header i {
-            color: var(--primary);
-        }
+        .terms-card-header i { color: var(--primary); }
 
-        .terms-list ul {
-            padding-left: 20px;
-            font-size: 0.85rem;
-            color: var(--slate-700);
-            line-height: 1.55;
-        }
-
-        .terms-list li {
-            margin-bottom: 6px;
-        }
+        .terms-list ul { padding-left: 18px; font-size: 0.78rem; color: var(--slate-700); line-height: 1.45; }
+        .terms-list li { margin-bottom: 4px; }
 
         .calc-total-card {
             background: var(--white);
             border: 2px solid #b91c1c;
-            border-radius: 8px;
-            padding: 14px 18px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
+            border-radius: 6px;
+            padding: 10px 14px;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 8px;
         }
 
-        .calc-total-card .calc-label {
-            font-size: 1.05rem;
-            font-weight: 800;
-            color: #1e293b;
-            text-transform: uppercase;
-        }
-
-        .calc-total-card .calc-number {
-            font-size: 1.45rem;
-            font-weight: 800;
-            color: #b91c1c;
-        }
+        .calc-total-card .calc-label { font-size: 0.95rem; font-weight: 800; color: #1e293b; text-transform: uppercase; }
+        .calc-total-card .calc-number { font-size: 1.25rem; font-weight: 800; color: #b91c1c; }
 
         /* Product Info Box */
         .product-info-box {
             background: var(--slate-50);
             border: 1px solid var(--border);
             border-radius: 8px;
-            padding: 16px 18px;
-            margin: 10px 0 20px 0;
-            font-size: 0.88rem;
+            padding: 12px 14px;
+            margin: 8px 0 14px 0;
+            font-size: 0.82rem;
             color: var(--slate-700);
-            line-height: 1.6;
+            line-height: 1.45;
         }
 
-        .product-intro-p {
-            margin-bottom: 12px;
-            color: var(--slate-800);
-        }
-
-        .product-features-title {
-            font-weight: 700;
-            color: var(--slate-900);
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .product-features-list {
-            list-style: none;
-            padding-left: 0;
-            margin-bottom: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .product-features-list li {
-            position: relative;
-            padding-left: 24px;
-            line-height: 1.5;
-        }
-
-        .product-features-list li i {
-            position: absolute;
-            left: 0;
-            top: 4px;
-            color: #16a34a;
-            font-size: 0.85rem;
-        }
+        .product-intro-p { margin-bottom: 8px; color: var(--slate-800); }
+        .product-features-title { font-weight: 700; color: var(--slate-900); margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+        .product-features-list { list-style: none; padding-left: 0; margin-bottom: 0; display: flex; flex-direction: column; gap: 5px; }
+        .product-features-list li { position: relative; padding-left: 20px; line-height: 1.4; }
+        .product-features-list li i { position: absolute; left: 0; top: 3px; color: #16a34a; font-size: 0.78rem; }
 
         /* Signature Table */
         .signature-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 24px;
-            padding-top: 16px;
+            margin-top: 20px;
+            padding-top: 10px;
             border-top: 1px solid var(--border);
             table-layout: fixed;
         }
@@ -527,47 +396,15 @@
             border: none;
         }
 
-        .sign-date {
-            font-size: 0.85rem;
-            color: var(--slate-600);
-            min-height: 22px;
-            margin-bottom: 4px;
-        }
-
-        .sign-heading {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: var(--slate-800);
-            margin-bottom: 4px;
-        }
-
-        .sign-guide {
-            font-size: 0.8rem;
-            color: var(--slate-500);
-        }
-
-        .sign-space {
-            height: 65px;
-        }
-
-        .sign-author-name {
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--primary-dark);
-        }
-
-        .sign-author-phone {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--slate-700);
-        }
+        .sign-date { font-size: 0.8rem; color: var(--slate-600); min-height: 18px; margin-bottom: 2px; }
+        .sign-heading { font-size: 0.88rem; font-weight: 700; color: var(--slate-800); margin-bottom: 2px; }
+        .sign-guide { font-size: 0.75rem; color: var(--slate-500); }
+        .sign-space { height: 60px; }
+        .sign-author-name { font-size: 0.98rem; font-weight: 700; color: var(--primary-dark); }
+        .sign-author-phone { font-size: 0.85rem; font-weight: 700; color: var(--slate-700); }
 
         /* Admin Mode */
-        .editable-field {
-            outline: none;
-            border-radius: 3px;
-        }
-
+        .editable-field { outline: none; border-radius: 3px; }
         body.admin-mode .editable-field {
             background-color: #fffbeb !important;
             border: 1px dashed #f59e0b !important;
@@ -581,7 +418,7 @@
             border: 1px solid #93c5fd;
             padding: 8px 12px;
             border-radius: 6px;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             font-size: 0.82rem;
             color: #1e40af;
             justify-content: space-between;
@@ -592,23 +429,19 @@
         /* Modal Authentication */
         .modal-bg {
             display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(15, 23, 42, 0.6);
             backdrop-filter: blur(4px);
             z-index: 999;
-            align-items: center;
-            justify-content: center;
+            align-items: center; justify-content: center;
             padding: 16px;
         }
         .modal-bg.open { display: flex; }
 
         .modal-box {
             background: var(--white);
-            border-radius: 10px;
-            padding: 24px;
-            width: 100%;
-            max-width: 360px;
+            border-radius: 10px; padding: 24px;
+            width: 100%; max-width: 360px;
             text-align: center;
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
@@ -616,21 +449,26 @@
         .modal-box h3 { font-size: 1.1rem; color: var(--slate-900); margin-bottom: 6px; }
         .modal-box p { font-size: 0.8rem; color: var(--slate-500); margin-bottom: 14px; }
         .modal-box input {
-            width: 100%;
-            padding: 9px 12px;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            font-size: 0.95rem;
-            text-align: center;
-            margin-bottom: 12px;
-            outline: none;
+            width: 100%; padding: 9px 12px;
+            border: 1px solid var(--border); border-radius: 6px;
+            font-size: 0.95rem; text-align: center;
+            margin-bottom: 12px; outline: none;
         }
         .modal-err { color: #dc2626; font-size: 0.75rem; margin-top: -8px; margin-bottom: 10px; display: none; }
 
-        /* Print Optimization */
+        /* --------------------------------------------------------------------------
+           TỐI ƯU IN ẤN: ÉP CỐ ĐỊNH CHUẨN 3 TRANG, LOẠI BỎ HOÀN TOÀN KHOẢNG TRỐNG THỪA
+        -------------------------------------------------------------------------- */
         @media print {
-            @page { size: A4 portrait; margin: 8mm 10mm; }
-            body { background: white; padding: 0; font-size: 11px; }
+            @page {
+                size: A4 portrait;
+                margin: 6mm 8mm; /* Giảm lề sát mép giấy để tận dụng tối đa chiều cao */
+            }
+            body {
+                background: white;
+                padding: 0;
+                font-size: 10.5px;
+            }
             .app-bar, .admin-alert, .modal-bg, .qty-btn { display: none !important; }
             .page-container { max-width: 100%; margin: 0; padding: 0; }
             .document-paper { border: none; box-shadow: none; padding: 0; }
@@ -638,64 +476,77 @@
             .company-header-table {
                 display: table !important;
                 width: 100% !important;
-                border-bottom: 2px solid var(--primary) !important;
-                margin-bottom: 12px !important;
+                border-bottom: 1.5px solid var(--primary) !important;
+                margin-bottom: 8px !important;
             }
             .company-header-table td {
                 display: table-cell !important;
                 vertical-align: middle !important;
-                padding-bottom: 10px !important;
+                padding-bottom: 6px !important;
             }
-            .company-header-table .col-logo {
-                width: 75px !important;
-            }
-            .company-logo {
-                width: 65px !important;
-                height: 65px !important;
-                display: block !important;
-            }
-            .company-details h1 {
-                font-size: 1.1rem !important;
-                color: #1e3a8a !important;
-                margin-bottom: 2px !important;
-            }
-            .company-details p {
-                font-size: 0.8rem !important;
-                color: #334155 !important;
-                line-height: 1.35 !important;
-            }
+            .company-header-table .col-logo { width: 60px !important; }
+            .company-logo { width: 52px !important; height: 52px !important; display: block !important; }
+            .company-details h1 { font-size: 1rem !important; color: #1e3a8a !important; margin-bottom: 1px !important; }
+            .company-details p { font-size: 0.75rem !important; color: #334155 !important; line-height: 1.3 !important; }
 
-            .quotation-hero { background: transparent; border: none; padding: 0 0 8px 0; border-bottom: 1px solid var(--border); }
-            .quotation-hero h2 { font-size: 1.3rem; color: #1e3a8a; }
-            .quotation-hero .hero-badge { background: transparent; border: none; color: #b45309; padding: 0; }
+            .quotation-hero { background: transparent; border: none; padding: 4px 0; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
+            .quotation-hero h2 { font-size: 1.15rem; color: #1e3a8a; margin-bottom: 2px; }
+            .quotation-hero .hero-desc { font-size: 0.78rem; margin-bottom: 4px; }
+            .quotation-hero .hero-badge { background: transparent; border: none; color: #b45309; padding: 0; margin-bottom: 4px; }
             
             .hero-meta-table {
                 display: table !important;
                 width: 100% !important;
                 border-top: 1px dashed var(--slate-300) !important;
-                margin-top: 4px !important;
+                margin-top: 2px !important;
+                padding-top: 4px !important;
             }
             .hero-meta-table td {
                 display: table-cell !important;
-                font-size: 0.78rem !important;
+                font-size: 0.72rem !important;
                 white-space: nowrap !important;
                 color: #475569 !important;
+                padding: 2px 2px 0 2px !important;
             }
-            
-            .product-info-box { background: transparent !important; border: 1px solid var(--border) !important; }
-            .signature-table { page-break-inside: avoid; margin-top: 18px; }
-            .sign-space { height: 55px; }
-            .qty-val { border: none; font-size: 11px; }
-            body.admin-mode .editable-field { background: transparent !important; border: none !important; padding: 0 !important; }
 
-            /* Định nghĩa lớp ngắt trang để cố định 3 trang in độc lập */
+            .recipient-box { padding: 4px 8px; margin-bottom: 8px; }
+            .intro-text { margin-bottom: 6px; font-size: 0.8rem; }
+            .sec-title { font-size: 0.85rem; margin: 8px 0 4px 0; padding-bottom: 2px; }
+            .table-wrap { margin-bottom: 8px; }
+            table.quote-table th, table.quote-table td { padding: 5px 4px; font-size: 0.78rem; }
+            
+            .summary-box { padding: 8px 10px; margin: 8px 0; gap: 6px; background: transparent !important; border: 1px solid var(--border); }
+            .terms-list ul { font-size: 0.75rem; line-height: 1.35; }
+            .calc-total-card { padding: 6px 10px; border: 1.5px solid #b91c1c; }
+            .calc-total-card .calc-label { font-size: 0.85rem; }
+            .calc-total-card .calc-number { font-size: 1.1rem; }
+
+            .product-info-box { padding: 8px 10px; margin: 4px 0 8px 0; background: transparent !important; }
+            .product-intro-p { margin-bottom: 4px; }
+            .product-features-list { gap: 3px; }
+            .product-features-list li { font-size: 0.75rem; line-height: 1.3; }
+
+            /* Kiểm soát ngắt trang chuẩn mực (Tránh tràn lên 4-5 trang) */
             .page-break-before {
                 page-break-before: always;
                 break-before: page;
             }
+
+            .signature-table {
+                page-break-inside: avoid;
+                margin-top: 12px;
+                padding-top: 6px;
+            }
+            .sign-space { height: 45px; }
+            .qty-val { border: none; font-size: 10px; }
+            body.admin-mode .editable-field { background: transparent !important; border: none !important; padding: 0 !important; }
+
             .attachment-container img {
                 max-width: 100% !important;
-                height: auto !important;
+                max-height: 96vh !important; /* Co giãn vừa khít màn hình khổ A4 trang 3 */
+                object-fit: contain;
+                display: block;
+                margin: 0 auto;
                 page-break-inside: avoid;
             }
         }
@@ -849,7 +700,7 @@ Số chứng nhận: 25.04.01/CNSP</div>
             <div class="sec-title">
                 <i class="fa-solid fa-arrows-rotate"></i> DỊCH VỤ DUY TRÌ
             </div>
-            <p style="font-size: 0.88rem; color: var(--slate-700); margin-bottom: 8px;">
+            <p style="font-size: 0.82rem; color: var(--slate-700); margin-bottom: 6px;">
                 Sau 12 tháng kể từ ngày kích hoạt, Căn cứ theo nhu cầu sử dụng Khách hàng cần đóng phí duy trì sử dụng cho từng thiết bị chi tiết như sau:
             </p>
             <div class="table-wrap">
@@ -936,7 +787,7 @@ Số chứng nhận: 25.04.01/CNSP</div>
                 </ul>
             </div>
 
-            <!-- TRANG 2: BẢNG CHỮ KÝ (NGẮT TRANG RIÊNG BIỆT) -->
+            <!-- TRANG 2: BẢNG CHỮ KÝ (NGẮT TRANG SẠCH SẼ, KHÔNG DƯ THỪA KHOẢNG TRỐNG) -->
             <table class="signature-table page-break-before">
                 <tr>
                     <td>
@@ -962,19 +813,19 @@ Số chứng nhận: 25.04.01/CNSP</div>
                 </tr>
             </table>
 
-            <!-- TRANG 3: TÀI LIỆU CHỨNG NHẬN ĐÍNH KÈM (NGẮT TRANG RIÊNG BIỆT Ở CUỐI CÙNG) -->
+            <!-- TRANG 3: TÀI LIỆU CHỨNG NHẬN ĐÍNH KÈM -->
             <div class="sec-title page-break-before">
                 <i class="fa-solid fa-file-image"></i> TÀI LIỆU CHỨNG NHẬN & QUY CHUẨN ĐÍNH KÈM
             </div>
             
-            <div class="attachment-container" style="margin-top: 15px;">
-                <p style="font-size: 0.88rem; color: var(--slate-700); margin-bottom: 15px;">
+            <div class="attachment-container" style="margin-top: 10px;">
+                <p style="font-size: 0.82rem; color: var(--slate-700); margin-bottom: 10px;">
                     Dưới đây là văn bản chứng nhận hợp quy chi tiết của thiết bị CAM4G-02:
                 </p>
                 
                 <!-- Ảnh chứng nhận duy nhất -->
-                <div style="margin-bottom: 10px; text-align: center;">
-                    <img src="https://github.com/canhntnear/baogiacam4g/raw/main/QCVN06CAM4G02_page-0002.jpg" alt="Chứng nhận QCVN06 Trang 2" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border);">
+                <div style="text-align: center;">
+                    <img src="https://github.com/canhntnear/baogiacam4g/raw/main/QCVN06CAM4G02_page-0002.jpg" alt="Chứng nhận QCVN06 Trang 2">
                 </div>
             </div>
 
