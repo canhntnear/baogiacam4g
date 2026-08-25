@@ -688,7 +688,7 @@
             .qty-val { border: none; font-size: 11px; }
             body.admin-mode .editable-field { background: transparent !important; border: none !important; padding: 0 !important; }
 
-            /* Ép buộc phần tài liệu đính kèm nhảy sang trang mới hoàn toàn độc lập */
+            /* Định nghĩa lớp ngắt trang để cố định 3 trang in độc lập */
             .page-break-before {
                 page-break-before: always;
                 break-before: page;
@@ -936,8 +936,8 @@ Số chứng nhận: 25.04.01/CNSP</div>
                 </ul>
             </div>
 
-            <!-- CHỮ KÝ NẰM TRƯỚC (SAU BẢNG BÁO GIÁ) -->
-            <table class="signature-table">
+            <!-- TRANG 2: BẢNG CHỮ KÝ (NGẮT TRANG RIÊNG BIỆT) -->
+            <table class="signature-table page-break-before">
                 <tr>
                     <td>
                         <div class="sign-date"></div>
@@ -962,7 +962,7 @@ Số chứng nhận: 25.04.01/CNSP</div>
                 </tr>
             </table>
 
-            <!-- 5. TÀI LIỆU CHỨNG NHẬN ĐÍNH KÈM (ĐÃ TÁCH THÀNH 1 TRANG RIÊNG BIỆT Ở CUỐI CÙNG) -->
+            <!-- TRANG 3: TÀI LIỆU CHỨNG NHẬN ĐÍNH KÈM (NGẮT TRANG RIÊNG BIỆT Ở CUỐI CÙNG) -->
             <div class="sec-title page-break-before">
                 <i class="fa-solid fa-file-image"></i> TÀI LIỆU CHỨNG NHẬN & QUY CHUẨN ĐÍNH KÈM
             </div>
@@ -972,7 +972,7 @@ Số chứng nhận: 25.04.01/CNSP</div>
                     Dưới đây là văn bản chứng nhận hợp quy chi tiết của thiết bị CAM4G-02:
                 </p>
                 
-                <!-- Trang 2 (Ảnh lấy từ GitHub của bạn) -->
+                <!-- Ảnh chứng nhận duy nhất -->
                 <div style="margin-bottom: 10px; text-align: center;">
                     <img src="https://github.com/canhntnear/baogiacam4g/raw/main/QCVN06CAM4G02_page-0002.jpg" alt="Chứng nhận QCVN06 Trang 2" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border);">
                 </div>
