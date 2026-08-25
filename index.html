@@ -404,6 +404,46 @@
         .sign-author-name { font-size: 0.98rem; font-weight: 700; color: var(--primary-dark); }
         .sign-author-phone { font-size: 0.85rem; font-weight: 700; color: var(--slate-700); }
 
+        /* Ngắt trang để đẩy phần thông tin thêm và tài liệu sang trang sau */
+        .page-break-before {
+            page-break-before: always;
+            break-before: page;
+        }
+
+        /* Ẩn hiện tài liệu trên Web */
+        .toggle-attachment-btn {
+            background: #eff6ff;
+            color: #1e40af;
+            border: 1px solid #bfdbfe;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .toggle-attachment-btn:hover { background: #dbeafe; }
+        
+        .attachment-container {
+            display: none; /* Mặc định ẩn trên web */
+            margin-top: 10px;
+            text-align: center;
+        }
+        .attachment-container.show {
+            display: block;
+        }
+        
+        .attachment-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
         /* Admin Mode */
         .editable-field { outline: none; border-radius: 3px; }
         body.admin-mode .editable-field {
@@ -457,20 +497,11 @@
         }
         .modal-err { color: #dc2626; font-size: 0.75rem; margin-top: -8px; margin-bottom: 10px; display: none; }
 
-        /* --------------------------------------------------------------------------
-           TỐI ƯU IN ẤN: DÒNG CHẢY TỰ NHIÊN, CHỈ NGẮT TRANG TRƯỚC ẢNH ĐÍNH KÈM
-        -------------------------------------------------------------------------- */
+        /* Tối ưu in ấn */
         @media print {
-            @page {
-                size: A4 portrait;
-                margin: 6mm 8mm;
-            }
-            body {
-                background: white;
-                padding: 0;
-                font-size: 10.5px;
-            }
-            .app-bar, .admin-alert, .modal-bg, .qty-btn { display: none !important; }
+            @page { size: A4 portrait; margin: 6mm 8mm; }
+            body { background: white; padding: 0; font-size: 10.5px; }
+            .app-bar, .admin-alert, .modal-bg, .qty-btn, .toggle-attachment-btn { display: none !important; }
             .page-container { max-width: 100%; margin: 0; padding: 0; }
             .document-paper { border: none; box-shadow: none; padding: 0; }
             
@@ -536,12 +567,10 @@
             .qty-val { border: none; font-size: 10px; }
             body.admin-mode .editable-field { background: transparent !important; border: none !important; padding: 0 !important; }
 
-            /* CHỈ NGẮT TRANG DUY NHẤT ĐỂ ĐẨY ẢNH CHỨNG NHẬN SANG TRANG SAU CÙNG */
-            .page-break-before-img {
-                page-break-before: always;
-                break-before: page;
+            /* Khi in ấn, hiển thị đầy đủ tài liệu ở trang sau */
+            .attachment-container {
+                display: block !important;
             }
-
             .attachment-container img {
                 max-width: 100% !important;
                 max-height: 96vh !important;
@@ -749,8 +778,37 @@ Số chứng nhận: 25.04.01/CNSP</div>
                 </table>
             </div>
 
+            <!-- BẢNG CHỮ KÝ NẰM NGAY SAU DỊCH VỤ DUY TRÌ -->
+            <table class="signature-table">
+                <tr>
+                    <td>
+                        <div class="sign-date"></div>
+                        <div class="sign-heading">Khách hàng ký xác nhận đặt hàng</div>
+                        <div class="sign-guide">(Ký, ghi rõ họ tên và đóng dấu)</div>
+                        <div class="sign-space"></div>
+                    </td>
+                    <td>
+                        <div class="sign-date">
+                            <em>Khánh Hòa, ngày <span id="signDateText" class="editable-field" contenteditable="false" onblur="syncSignDate(this.innerText)">24 tháng 08 năm 2026</span></em>
+                        </div>
+                        <div class="sign-heading">Người báo giá</div>
+                        <div class="sign-space"></div>
+                        <div class="sign-author-name">
+                            <span id="signName" class="editable-field" contenteditable="false" onblur="syncInfo('name', this.innerText)">Giang Nam</span>
+                        </div>
+                        <div class="sign-author-phone">
+                            <i class="fa-solid fa-phone"></i> 
+                            <span id="signPhone" class="editable-field" contenteditable="false" onblur="syncInfo('phone', this.innerText)">081.446.1234</span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- NGẮT TRANG ĐỂ ĐẨY PHẦN THÔNG TIN THÊM & TÀI LIỆU XUỐNG TRANG SAU -->
+            <div class="page-break-before"></div>
+
             <!-- 4. THÔNG TIN THÊM VỀ SẢN PHẨM/DỊCH VỤ -->
-            <div class="sec-title">
+            <div class="sec-title" style="margin-top: 0;">
                 <i class="fa-solid fa-microchip"></i> THÔNG TIN THÊM VỀ SẢN PHẨM/DỊCH VỤ
             </div>
             <div class="product-info-box">
@@ -788,45 +846,24 @@ Số chứng nhận: 25.04.01/CNSP</div>
                 </ul>
             </div>
 
-            <!-- BẢNG CHỮ KÝ CHẢY TỰ NHIÊN THEO NỘI DUNG -->
-            <table class="signature-table">
-                <tr>
-                    <td>
-                        <div class="sign-date"></div>
-                        <div class="sign-heading">Khách hàng ký xác nhận đặt hàng</div>
-                        <div class="sign-guide">(Ký, ghi rõ họ tên và đóng dấu)</div>
-                        <div class="sign-space"></div>
-                    </td>
-                    <td>
-                        <div class="sign-date">
-                            <em>Khánh Hòa, ngày <span id="signDateText" class="editable-field" contenteditable="false" onblur="syncSignDate(this.innerText)">24 tháng 08 năm 2026</span></em>
-                        </div>
-                        <div class="sign-heading">Người báo giá</div>
-                        <div class="sign-space"></div>
-                        <div class="sign-author-name">
-                            <span id="signName" class="editable-field" contenteditable="false" onblur="syncInfo('name', this.innerText)">Giang Nam</span>
-                        </div>
-                        <div class="sign-author-phone">
-                            <i class="fa-solid fa-phone"></i> 
-                            <span id="signPhone" class="editable-field" contenteditable="false" onblur="syncInfo('phone', this.innerText)">081.446.1234</span>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-
-            <!-- TÀI LIỆU CHỨNG NHẬN ĐÍNH KÈM (CHỈ NGẮT TRANG DUY NHẤT ĐỂ ĐẨY ẢNH XUỐNG TRANG CUỐI CÙNG) -->
-            <div class="sec-title page-break-before-img">
+            <!-- TÀI LIỆU CHỨNG NHẬN & QUY CHUẨN ĐÍNH KÈM (XUỐNG DÒNG) -->
+            <div class="sec-title">
                 <i class="fa-solid fa-file-image"></i> TÀI LIỆU CHỨNG NHẬN & QUY CHUẨN ĐÍNH KÈM
             </div>
             
-            <div class="attachment-container" style="margin-top: 10px;">
-                <p style="font-size: 0.82rem; color: var(--slate-700); margin-bottom: 10px;">
-                    Dưới đây là văn bản chứng nhận hợp quy chi tiết của thiết bị CAM4G-02:
-                </p>
+            <div>
+                <button class="toggle-attachment-btn" onclick="toggleAttachment()">
+                    <i class="fa-solid fa-eye" id="toggleIcon"></i> <span id="toggleText">Xem Tài Liệu Chứng Nhận QCVN 06</span>
+                </button>
                 
-                <!-- Ảnh chứng nhận duy nhất -->
-                <div style="text-align: center;">
-                    <img src="https://github.com/canhntnear/baogiacam4g/raw/main/QCVN06CAM4G02_page-0002.jpg" alt="Chứng nhận QCVN06 Trang 2">
+                <div class="attachment-container" id="attachmentBox">
+                    <p style="font-size: 0.82rem; color: var(--slate-700); margin-bottom: 10px;">
+                        Dưới đây là văn bản chứng nhận hợp quy chi tiết của thiết bị CAM4G-02:
+                    </p>
+                    
+                    <div style="text-align: center;">
+                        <img src="https://github.com/canhntnear/baogiacam4g/raw/main/QCVN06CAM4G02_page-0002.jpg" alt="Chứng nhận QCVN06 Trang 2">
+                    </div>
                 </div>
             </div>
 
@@ -942,6 +979,22 @@ Số chứng nhận: 25.04.01/CNSP</div>
                 if (raw) {
                     document.getElementById('topCallBtn').href = 'tel:' + raw;
                 }
+            }
+        }
+
+        function toggleAttachment() {
+            const box = document.getElementById('attachmentBox');
+            const text = document.getElementById('toggleText');
+            const icon = document.getElementById('toggleIcon');
+            
+            if (box.classList.contains('show')) {
+                box.classList.remove('show');
+                text.innerText = "Xem Tài Liệu Chứng Nhận QCVN 06";
+                icon.className = "fa-solid fa-eye";
+            } else {
+                box.classList.add('show');
+                text.innerText = "Ẩn Tài Liệu Chứng Nhận";
+                icon.className = "fa-solid fa-eye-slash";
             }
         }
 
