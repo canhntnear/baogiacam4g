@@ -123,9 +123,7 @@
             border: 1px solid var(--border);
         }
 
-        /* -------------------------------------------------------------
-           HEADER LOGO & THÔNG TIN CÔNG TY (TABLE CỐ ĐỊNH CHỐNG VỠ IN ẤN)
-        ------------------------------------------------------------- */
+        /* Company Header Table */
         .company-header-table {
             width: 100%;
             border-collapse: collapse;
@@ -190,9 +188,7 @@
             text-align: center;
         }
 
-        /* -------------------------------------------------------------
-           BANNER TIÊU ĐỀ & META DÒNG CĂN GIỮA
-        ------------------------------------------------------------- */
+        /* Quotation Hero */
         .quotation-hero {
             text-align: center;
             margin-bottom: 20px;
@@ -234,7 +230,6 @@
             margin-bottom: 10px;
         }
 
-        /* Bảng Meta thông tin báo giá */
         .hero-meta-table {
             width: 100%;
             border-collapse: collapse;
@@ -401,9 +396,7 @@
             white-space: nowrap;
         }
 
-        /* -------------------------------------------------------------
-           GHI CHÚ & ĐIỀU KHOẢN THƯƠNG MẠI
-        ------------------------------------------------------------- */
+        /* Summary & Terms */
         .summary-box {
             background: #f8fafc;
             border: 1px solid var(--border);
@@ -425,7 +418,6 @@
             gap: 8px;
             border-bottom: 1px solid var(--slate-200);
             padding-bottom: 6px;
-            letter-spacing: 0.01em;
         }
 
         .terms-card-header i {
@@ -460,7 +452,6 @@
             font-weight: 800;
             color: #1e293b;
             text-transform: uppercase;
-            letter-spacing: 0.02em;
         }
 
         .calc-total-card .calc-number {
@@ -469,9 +460,7 @@
             color: #b91c1c;
         }
 
-        /* -------------------------------------------------------------
-           THÔNG TIN THÊM VỀ SẢN PHẨM/DỊCH VỤ
-        ------------------------------------------------------------- */
+        /* Product Info Box */
         .product-info-box {
             background: var(--slate-50);
             border: 1px solid var(--border);
@@ -520,9 +509,7 @@
             font-size: 0.85rem;
         }
 
-        /* -------------------------------------------------------------
-           CHỮ KÝ ĐỐI DIỆN NHAU 100%
-        ------------------------------------------------------------- */
+        /* Signature Table */
         .signature-table {
             width: 100%;
             border-collapse: collapse;
@@ -575,7 +562,7 @@
             color: var(--slate-700);
         }
 
-        /* Admin mode */
+        /* Admin Mode */
         .editable-field {
             outline: none;
             border-radius: 3px;
@@ -640,48 +627,7 @@
         }
         .modal-err { color: #dc2626; font-size: 0.75rem; margin-top: -8px; margin-bottom: 10px; display: none; }
 
-        /* -------------------------------------------------------------
-           MOBILE OPTIMIZATION
-        ------------------------------------------------------------- */
-        @media (max-width: 768px) {
-            body { padding: 0 0 60px 0; }
-            .page-container { padding: 0 6px; margin: 10px auto; }
-            .document-paper { padding: 18px 12px; }
-            
-            .company-header-table .col-logo { width: 58px; }
-            .company-logo { width: 52px; height: 52px; }
-            .company-details h1 { font-size: 0.95rem; }
-
-            .quotation-hero h2 { font-size: 1.25rem; }
-            .quotation-hero .hero-desc { font-size: 0.85rem; }
-
-            .hero-meta-table td {
-                font-size: 0.72rem;
-                padding: 6px 2px 0 2px;
-            }
-            
-            table.quote-table { font-size: 0.8rem; min-width: 520px; }
-            table.quote-table th, table.quote-table td { padding: 8px 6px; }
-
-            .calc-total-card {
-                flex-direction: column;
-                text-align: center;
-                gap: 6px;
-            }
-            .calc-total-card .calc-label { font-size: 0.95rem; }
-            .calc-total-card .calc-number { font-size: 1.3rem; }
-
-            .signature-table td { padding: 0 4px; }
-            .sign-date { font-size: 0.75rem; }
-            .sign-heading { font-size: 0.85rem; }
-            .sign-author-name { font-size: 0.95rem; }
-            .sign-author-phone { font-size: 0.82rem; }
-            .sign-space { height: 45px; }
-        }
-
-        /* -------------------------------------------------------------
-           PRINT / PDF OPTIMIZATION
-        ------------------------------------------------------------- */
+        /* Print Optimization */
         @media print {
             @page { size: A4 portrait; margin: 8mm 10mm; }
             body { background: white; padding: 0; font-size: 11px; }
@@ -741,6 +687,17 @@
             .sign-space { height: 55px; }
             .qty-val { border: none; font-size: 11px; }
             body.admin-mode .editable-field { background: transparent !important; border: none !important; padding: 0 !important; }
+
+            /* Ngắt trang cho phần tài liệu đính kèm */
+            .page-break-before {
+                page-break-before: always;
+                break-before: page;
+            }
+            .attachment-container img {
+                max-width: 100% !important;
+                height: auto !important;
+                page-break-inside: avoid;
+            }
         }
     </style>
 </head>
@@ -770,13 +727,13 @@
     <div class="page-container">
         <div class="document-paper">
 
-            <!-- Alert khi bật chế độ NVKD -->
+            <!-- Alert NVKD -->
             <div class="admin-alert" id="adminAlert">
                 <div><strong><i class="fa-solid fa-user-pen"></i> Chế độ NVKD:</strong> Bấm vào Khách hàng, Đơn giá, Ngày lập, SĐT để sửa đổi.</div>
                 <button class="btn btn-print" style="padding: 2px 8px; font-size: 0.75rem; background: #fff; color: #1e40af; border: 1px solid #bfdbfe;" onclick="lockAdmin()">Khóa lại</button>
             </div>
 
-            <!-- Company Header: Logo & Danh sách các trang web -->
+            <!-- Company Header -->
             <table class="company-header-table">
                 <tr>
                     <td class="col-logo">
@@ -795,12 +752,11 @@
             <!-- QUOTATION HERO -->
             <div class="quotation-hero">
                 <h2>BẢNG BÁO GIÁ THIẾT BỊ & DỊCH VỤ</h2>
-                <div class="hero-desc">Hệ thống giám sát hành trình, ghi nhận hình ảnh người lái xe và ghi nhận khoan hành khách thông minh trên xe ô tô vận tải phù hợp quy định hiện hành</div>
+                <div class="hero-desc">Hệ thống giám sát hành trình, ghi nhận hình ảnh người lái xe và ghi nhận khoang hành khách thông minh trên xe ô tô vận tải phù hợp quy định hiện hành</div>
                 <div>
                     <span class="hero-subdesc hero-badge"><i class="fa-solid fa-circle-check"></i> Phù hợp quy chuẩn QCVN06:2024/BCA</span>
                 </div>
                 
-                <!-- BẢNG META ĐỒNG BỘ: Lập ngày ... -->
                 <table class="hero-meta-table">
                     <tr>
                         <td style="width: 30%;">Số văn bản: <strong class="editable-field" id="docCode" contenteditable="false">BG-VPK/2026-CR01</strong></td>
@@ -941,7 +897,7 @@ Số chứng nhận: 25.04.01/CNSP</div>
                 </table>
             </div>
 
-            <!-- 4. THÔNG TIN THÊM VỀ SẢN PHẨM/DỊCH VỤ (ĐÃ TĂNG VAI TRÒ NHÀ PHÂN PHỐI VẠN PHÚ KHÁNH) -->
+            <!-- 4. THÔNG TIN THÊM VỀ SẢN PHẨM/DỊCH VỤ -->
             <div class="sec-title">
                 <i class="fa-solid fa-microchip"></i> THÔNG TIN THÊM VỀ SẢN PHẨM/DỊCH VỤ
             </div>
@@ -980,8 +936,24 @@ Số chứng nhận: 25.04.01/CNSP</div>
                 </ul>
             </div>
 
-            <!-- CHỮ KÝ ĐỐI DIỆN NHAU 100% -->
-            <table class="signature-table">
+            <!-- 5. TÀI LIỆU CHỨNG NHẬN ĐÍNH KÈM (DẠNG ẢNH TỰ ĐỘNG NGẮT TRANG KHI IN) -->
+            <div class="sec-title page-break-before">
+                <i class="fa-solid fa-file-image"></i> TÀI LIỆU CHỨNG NHẬN & QUY CHUẨN ĐÍNH KÈM
+            </div>
+            
+            <div class="attachment-container" style="margin-top: 15px;">
+                <p style="font-size: 0.88rem; color: var(--slate-700); margin-bottom: 15px;">
+                    Dưới đây là văn bản chứng nhận hợp quy chi tiết của thiết bị CAM4G-02:
+                </p>
+                
+                <!-- Trang 2 (Ảnh đã có sẵn trên GitHub của bạn) -->
+                <div style="margin-bottom: 10px; text-align: center;">
+                    <img src="https://github.com/canhntnear/baogiacam4g/raw/main/QCVN06CAM4G02_page-0002.jpg" alt="Chứng nhận QCVN06 Trang 2" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border);">
+                </div>
+            </div>
+
+            <!-- CHỮ KÝ ĐỐI DIỆN NHAU -->
+            <table class="signature-table page-break-before">
                 <tr>
                     <td>
                         <div class="sign-date"></div>
@@ -1014,19 +986,19 @@ Số chứng nhận: 25.04.01/CNSP</div>
         <div class="modal-box">
             <h3><i class="fa-solid fa-shield-halved text-primary"></i> Mở khóa NVKD</h3>
             <p>Nhập mật khẩu để chỉnh sửa tên khách hàng, đơn giá, ngày tháng và số liên hệ.</p>
-            <input type="password" id="passInput" placeholder="Nhập mật khẩu (Mặc định: 0585114114)" onkeydown="if(event.key==='Enter') checkPass()">
+            <input type="password" id="passInput" placeholder="Nhập mật khẩu" onkeydown="if(event.key==='Enter') checkPass()">
             <div class="modal-err" id="passErr">Mật khẩu không chính xác!</div>
             <div style="display: flex; gap: 8px;">
                 <button class="btn btn-print" style="flex: 1; background: #e2e8f0; color: #334155;" onclick="closePassModal()">Hủy</button>
                 <button class="btn btn-call" style="flex: 1;" onclick="checkPass()">Mở khóa</button>
             </div>
             <p style="font-size: 0.76rem; color: #64748b; margin-top: 12px; margin-bottom: 0; background: #f1f5f9; padding: 6px 10px; border-radius: 6px; border: 1px dashed #cbd5e1;">
-                <i class="fa-solid fa-key text-primary"></i> Mật khẩu mặc định để mở khóa: <strong>0585114114</strong>
+                <i class="fa-solid fa-key text-primary"></i> Mật khẩu mặc định: <strong>0585114114</strong>
             </p>
         </div>
     </div>
 
-    <!-- JAVASCRIPT TÍNH TOÁN ĐỘNG & MẬT KHẨU MẶC ĐỊNH MỚI -->
+    <!-- JAVASCRIPT -->
     <script>
         let unitPrice = 3800000;
         let simPrice = 250000;
@@ -1132,7 +1104,7 @@ Số chứng nhận: 25.04.01/CNSP</div>
             }
         }
 
-        function closePasswordModal() {
+        function closePassModal() {
             document.getElementById('passModal').classList.remove('open');
         }
 
@@ -1140,14 +1112,14 @@ Số chứng nhận: 25.04.01/CNSP</div>
             let p = document.getElementById('passInput').value.trim();
             if (PASS_LIST.includes(p)) {
                 isAdmin = true;
-                closePasswordModal();
+                closePassModal();
                 setAdmin(true);
             } else {
                 document.getElementById('passErr').style.display = 'block';
             }
         }
 
-        function lockAdminMode() {
+        function lockAdmin() {
             isAdmin = false;
             setAdmin(false);
         }
